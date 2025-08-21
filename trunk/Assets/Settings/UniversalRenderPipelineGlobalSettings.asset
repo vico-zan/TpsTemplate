@@ -61,6 +61,7 @@ MonoBehaviour:
       - rid: 8021570786960867553
       - rid: 8021570786960867554
       - rid: 8021570786960867555
+      - rid: 8021571124337573888
     m_RuntimeSettings:
       m_List: []
   m_AssetVersion: 8
@@ -479,3 +480,8 @@ MonoBehaviour:
           - {r: 0.5, g: 0, b: 0.5, a: 1}
           - {r: 0.5, g: 0.5, b: 0.5, a: 1}
           - {r: 0, g: 0, b: 1, a: 1}
+    - rid: 8021571124337573888
+      type: {class: RenderingDebuggerRuntimeResources, ns: UnityEngine.Rendering,
+        asm: Unity.RenderPipelines.Core.Runtime}
+      data:
+        m_version: 0
