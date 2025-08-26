@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 908878101}
-  - component: {fileID: 908878102}
   - component: {fileID: 990197791}
+  - component: {fileID: 107996429198732850}
   m_Layer: 10
   m_Name: PlayerInteract
   m_TagString: Untagged
@@ -33,8 +33,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4335271248481468228}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &908878102
-BoxCollider:
+--- !u!114 &990197791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908878100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9911b2becf614644ca1485facef60330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetIcon: {fileID: 0}
+--- !u!135 &107996429198732850
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -52,21 +65,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 4, z: 4}
-  m_Center: {x: 0, y: 2, z: 0}
---- !u!114 &990197791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 908878100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9911b2becf614644ca1485facef60330, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetIcon: {fileID: 0}
+  m_Radius: 3
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &4335271248481493626
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  lookSpeed: 0
+  lookSpeed: 0.1
   _vcam1: {fileID: 0}
   _vcam2: {fileID: 0}
 --- !u!114 &1041714438
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 97210cd740af04df697b1fa71c9c9623,
+  m_Actions: {fileID: -944628639613478452, guid: 41f9c9ea5c493ea4e83783629d237913,
     type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
@@ -286,23 +286,23 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 50fd2809-3aa3-4a90-988e-1facf6773553
-    m_ActionName: 'vplay/move[/DualShock4GamepadHID/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+    m_ActionId: 3eb4bd7f-a174-4825-a728-b1dc687f0ede
+    m_ActionName: 'Player/Move[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: c60e0974-d140-4597-a40e-9862193067e9
-    m_ActionName: 'vplay/look[/DualShock4GamepadHID/rightStick,/Mouse/delta]'
+    m_ActionId: 0cd2a278-2e63-48d8-b3d5-38a3e19631e5
+    m_ActionName: 'Player/Look[/XInputControllerWindows/rightStick,/Mouse/delta]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 1077f913-a9f9-41b1-acb3-b9ee0adbc744
-    m_ActionName: 'vplay/confirm[/DualShock4GamepadHID/buttonEast,/Mouse/leftButton]'
+    m_ActionId: 4473ce56-de2e-4b5b-b0b8-a27c46076f69
+    m_ActionName: 'Player/Fire[/XInputControllerWindows/rightTrigger,/Mouse/leftButton]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: c7864115-0006-4da0-9cff-7c6cc1a72ef4
-    m_ActionName: 'vplay/cancel[/DualShock4GamepadHID/buttonSouth,/Keyboard/escape]'
+    m_ActionId: df2a623b-243c-4c8b-a377-0b2be669e81f
+    m_ActionName: 'Player/Cancel[/Mouse/rightButton]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: vplay
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &4335271248481493670
